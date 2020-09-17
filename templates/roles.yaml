@@ -1,0 +1,27 @@
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: Role
+metadata:
+  labels:
+    app: "ganapati"
+  name: cool-role
+  namespace: "default"
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - services
+      - endpoints
+      - pods
+      - ingresses
+      - componentstatuses  
+      - endpoints
+      - namespaces
+      - pods/status
+      - pods/log  
+    verbs:
+      - create  
+      - get
+      - watch
+      - delete
+      - list  
+      
